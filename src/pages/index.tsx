@@ -1,5 +1,7 @@
-import CITiMarco from './CITiMarco';
+import Home from './Home';
+import CreateEvent from './CreateEvent';
 
 export {
-  CITiMarco,
+  Home,
+  CreateEvent,
 };

@@ -14,6 +14,7 @@ export const Container = styled.div`
     color: ${(props) => props.theme.colors.primary};
     margin-top: 40px;
     text-align: center;
+    
     @media (max-width: 720px) {
       font-size: 28px;
     }
@@ -37,7 +38,6 @@ export const LogoCiti = styled.img`
 export const LogoRocketComponent = styled.img`
   width: 135px;
   margin-top: 40px;
-  /* justify-self: flex-end; */
 `;
 
 export const RocketWrapper = styled.div`
