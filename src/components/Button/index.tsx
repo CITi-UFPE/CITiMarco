@@ -6,8 +6,8 @@ type ButtonProps = {
     textValue: string;
 };
 
-const Button: React.FC<ButtonProps> = ({ onClickFunction, textValue }) => (
-  <ButtonContainer onClick={() => onClickFunction}>
+const Button: React.FC<ButtonProps> = ({ onClickFunction, textValue }: ButtonProps) => (
+  <ButtonContainer onClick={() => onClickFunction()}>
     <Text>{textValue}</Text>
   </ButtonContainer>
 );
