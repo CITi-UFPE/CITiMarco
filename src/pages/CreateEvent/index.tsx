@@ -2,7 +2,7 @@ import React from 'react';
 import { Container } from './style';
 import {
   Button,
-} from '../../components/Button';
+} from '../../components';
 
 const CreateEvent: React.FC = () => {
   const HandleClick = () => {
