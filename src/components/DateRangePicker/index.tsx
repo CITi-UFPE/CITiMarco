@@ -1,19 +1,30 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { MuiPickersUtilsProvider, DatePicker } from '@material-ui/pickers';
 import DateFnsUtils from '@date-io/date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
 
-import { DatePickerDiv } from './style';
+import {
+  Container,
+  Label,
+} from './style';
 
-const DateRangePicker: React.ElementType = () => {
-  const nextWeek = new Date();
-  nextWeek.setDate(nextWeek.getDate() + 7);
-  const [initialDate, setInitialDate] = useState<Date | null>(new Date());
-  const [finalDate, setFinalDate] = useState<Date | null>(nextWeek);
+interface DatePickerProps {
+  initialDate: Date;
+  setInitialDate: (date: Date | null) => void;
+  finalDate: Date;
+  setFinalDate: (date: Date | null) => void;
+}
 
-  return (
-    <DatePickerDiv>
-      <MuiPickersUtilsProvider utils={DateFnsUtils} locale={ptBR}>
+const DateRangePicker: React.ElementType = ({
+  initialDate,
+  setInitialDate,
+  finalDate,
+  setFinalDate,
+}: DatePickerProps) => (
+  <Container>
+    <Label><strong>Intervalo da reunião</strong></Label>
+    <MuiPickersUtilsProvider utils={DateFnsUtils} locale={ptBR}>
+      <div style={{ width: '100%', display: 'flex', justifyContent: 'space-between' }}>
         <DatePicker
           style={{ width: '70px' }}
           value={initialDate}
@@ -39,9 +50,9 @@ const DateRangePicker: React.ElementType = () => {
           minDate={initialDate}
           minDateMessage="Data deve ser após data inicial."
         />
-      </MuiPickersUtilsProvider>
-    </DatePickerDiv>
-  );
-};
+      </div>
+    </MuiPickersUtilsProvider>
+  </Container>
+);
 
 export default DateRangePicker;

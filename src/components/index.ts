@@ -5,6 +5,7 @@ import { InputsPage } from './InputsPage';
 import { TableInputs } from './TableInputs';
 import Button from './Button';
 import DateRangePicker from './DateRangePicker';
+import Input from './Input';
 
 export {
   LoginAuth,
@@ -14,4 +15,5 @@ export {
   TableInputs,
   DurationInput,
   InputsPage,
+  Input,
 };
