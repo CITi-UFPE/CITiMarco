@@ -4,6 +4,7 @@ import LogoutAuth from './LogoutAuth';
 import { TableInputs } from './TableInputs';
 import Button from './Button';
 import DateRangePicker from './DateRangePicker';
+import ConfirmedMeeting from './ConfirmedMeeting';
 import Input from './Input';
 
 export {
@@ -13,5 +14,6 @@ export {
   Button,
   TableInputs,
   DurationInput,
+  ConfirmedMeeting,
   Input,
 };
