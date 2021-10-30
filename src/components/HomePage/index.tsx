@@ -1,23 +1,20 @@
 import React from 'react';
-import { Container } from './style';
-import { Logo } from '../../assets';
-import { DateRangePicker } from '..';
+import { Container, LogoCiti, LogoRocketComponent } from './style';
+import { Logo, LogoRocket } from '../../assets';
+import { LoginAuth } from '..';
 
-export const HomePage: React.FC = () => (
-  <Container>
-    <img src={Logo} alt="" />
-    <h1>ReactJS Boilerplate</h1>
-    <p>
-      Made with
-      {' '}
-      <strong>&lt; &#x0002F; &gt;</strong>
-      {' '}
-      and
-      {' '}
-      <strong>&hearts;</strong>
-      {' '}
-      by CITi
-    </p>
-    <DateRangePicker />
-  </Container>
+const HomePage: React.FC = () => (
+  <>
+    <Container>
+      <LogoCiti src={Logo} alt="" />
+      <div>
+        <LoginAuth />
+        <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+          <LogoRocketComponent src={LogoRocket} alt="" />
+        </div>
+      </div>
+    </Container>
+  </>
 );
+
+export default HomePage;

@@ -1,4 +1,5 @@
 import React from 'react';
+import GoogleButton from 'react-google-button';
 
 import { GoogleLogin } from 'react-google-login';
 // refresh token
@@ -28,6 +29,15 @@ function LoginAuth(): JSX.Element {
         cookiePolicy="single_host_origin"
         style={{ marginTop: '100px' }}
         isSignedIn
+        render={(renderProps) => (
+          <>
+            <GoogleButton
+              type="dark" // can be light or dark
+              onClick={renderProps.onClick}
+              disabled={renderProps.disabled}
+            />
+          </>
+        )}
       />
     </>
   );

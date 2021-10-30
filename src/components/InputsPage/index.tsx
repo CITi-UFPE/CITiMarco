@@ -10,3 +10,5 @@ export const InputsPage: React.FC = () => (
     <Button onClickFunction={HandleClick} textValue="Seguinte" />
   </Container>
 );
+
+export default InputsPage;

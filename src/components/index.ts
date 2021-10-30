@@ -1,9 +1,10 @@
-import { HomePage } from './HomePage';
+import DurationInput from './DurationInput';
+import HomePage from './HomePage';
 import LoginAuth from './LoginAuth';
 import LogoutAuth from './LogoutAuth';
-import { DateRangePicker } from './DateRangePicker';
-import { InputsPage } from './InputsPage';
-import { Button } from './Button';
+import Button from './Button';
+import DateRangePicker from './DateRangePicker';
+import InputsPage from './InputsPage';
 
 export {
   HomePage,
@@ -12,4 +13,5 @@ export {
   DateRangePicker,
   InputsPage,
   Button,
+  DurationInput,
 };
