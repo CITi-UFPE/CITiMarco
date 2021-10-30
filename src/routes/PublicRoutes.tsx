@@ -7,7 +7,6 @@ export const PublicRoutes = (): JSX.Element => (
   <Switch>
     <Route path="/" exact>
       <HomePage />
-      <LoginAuth />
     </Route>
     <Route path="/meetings" exact>
       <InputsPage />
