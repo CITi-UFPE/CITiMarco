@@ -60,4 +60,51 @@ const getEventAtATime = (time: Date, userElement: user): event | null => {
   }
   return null;
 };
+
+// test variables -------------------------------------------------------
+
+const testEvent: event = {
+  start: {
+    dateTime: new Date(2021, 11, 1),
+  },
+  end: {
+    dateTime: new Date(2021, 11, 6),
+  },
+  description: 'eventLvl: 2',
+};
+
+const testEvent2: event = {
+  start: {
+    dateTime: new Date(2021, 11, 5),
+  },
+  end: {
+    dateTime: new Date(2021, 11, 6),
+  },
+  description: 'eventLvl: 3',
+};
+
+const users: user[] = [
+  {
+    email: 'vinicius.scala@citi.org.br',
+    googleCalendar: {
+      items: [testEvent2],
+    },
+  }, {
+    email: 'vinicius.xavier@citi.org.br',
+    googleCalendar: {
+      items: [testEvent],
+    },
+  }];
+
+const algorithmInputTest: algorithmInput = {
+  users,
+  minTime: new Date(2021, 11, 1),
+  maxTime: new Date(2021, 11, 6),
+  eventName: 'event test',
+  duration: 1,
+  eventLvl: 3,
+};
+
+// test variables ------------------------------------------------------- end
+
 export { };
