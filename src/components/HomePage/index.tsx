@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container } from './style';
 import { Logo } from '../../assets';
+import { DateRangePicker } from '..';
 
 export const HomePage: React.FC = () => (
   <Container>
@@ -17,5 +18,6 @@ export const HomePage: React.FC = () => (
       {' '}
       by CITi
     </p>
+    <DateRangePicker />
   </Container>
 );
