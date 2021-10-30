@@ -4,9 +4,9 @@ import { GoogleLogin } from 'react-google-login';
 // refresh token
 import { refreshTokenSetup } from '../../utils/refreshToken';
 
-const clientId = '707788443358-u05p46nssla3l8tmn58tpo9r5sommgks.apps.googleusercontent.com';
+const clientId = process.env.REACT_APP_CLIENT_ID || '123';
 
-function LoginAuth() {
+function LoginAuth(): JSX.Element {
   const onSuccess = (res: any) => {
     console.log('Login Success: currentUser:', res.profileObj);
     alert(`Logged in successfully welcome ${res.profileObj.name} 😍. \n See console for full profile object.`);
@@ -19,7 +19,7 @@ function LoginAuth() {
   };
 
   return (
-    <div>
+    <>
       <GoogleLogin
         clientId={clientId}
         buttonText="Login"
@@ -29,7 +29,7 @@ function LoginAuth() {
         style={{ marginTop: '100px' }}
         isSignedIn
       />
-    </div>
+    </>
   );
 }
 
