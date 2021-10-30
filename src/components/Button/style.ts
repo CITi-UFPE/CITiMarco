@@ -10,7 +10,6 @@ background-color: #58CBFB;
 `;
 
 export const Text = styled.text`
-font-family: Barlow;
 font-size: 12px;
 font-style: bold;
 font-weight: 700;
