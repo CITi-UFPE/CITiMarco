@@ -6,3 +6,5 @@ export const InputsPage: React.FC = () => (
     <h1>hi</h1>
   </Container>
 );
+
+export default InputsPage;

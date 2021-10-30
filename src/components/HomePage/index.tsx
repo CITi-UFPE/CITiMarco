@@ -3,7 +3,7 @@ import { Container, LogoCiti, LogoRocketComponent } from './style';
 import { Logo, LogoRocket } from '../../assets';
 import { LoginAuth } from '..';
 
-export const HomePage: React.FC = () => (
+const HomePage: React.FC = () => (
   <>
     <Container>
       <LogoCiti src={Logo} alt="" />
@@ -16,3 +16,5 @@ export const HomePage: React.FC = () => (
     </Container>
   </>
 );
+
+export default HomePage;
