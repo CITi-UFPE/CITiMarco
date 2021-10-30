@@ -1,4 +1,4 @@
-import Logo from './logo.png';
+import Logo from './logo.svg';
 import LogoRocket from './rocket_pencil.png';
 
 export {
