@@ -22,8 +22,6 @@
 
 1. Check if the component looks just like the mockup in different screen sizes 
 
-
-
 1. Read the changed files section on GitHub 
 
 1. Test the things that you think are worth testing, even the ones that are not in this description 
