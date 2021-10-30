@@ -20,6 +20,15 @@ export const DateRangePicker: React.ElementType = () => {
           format="dd/MM/yyyy"
           onChange={setInitialDate}
           disablePast
+          onAccept={(date) => {
+            if (date && finalDate) {
+              if (date.getTime() > finalDate.getTime()) {
+                const weekAfter = new Date(date);
+                weekAfter.setDate(weekAfter.getDate() + 7);
+                setFinalDate(weekAfter);
+              }
+            }
+          }}
         />
         <p>-</p>
         <DatePicker
