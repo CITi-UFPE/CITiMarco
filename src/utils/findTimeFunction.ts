@@ -60,5 +60,4 @@ const getEventAtATime = (time: Date, userElement: user): event | null => {
   }
   return null;
 };
-
 export { };
