@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const DatePickerDiv = styled.div`
   margin-top: 13px;
-  border-bottom: 0.5px solid #F4F4F4;
+  border-bottom: 0.5px solid #58CBFB;
   display: flex;
   align-items: baseline; 
   width: 160px;
@@ -14,7 +14,7 @@ export const DatePickerDiv = styled.div`
 
   .MuiInputBase-root{
     font: 400 14px sans-serif;
-    color: #F4F4F4;
+    color: #292929;
   }
 
   @media(max-width: 935px){
