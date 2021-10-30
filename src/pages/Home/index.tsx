@@ -1,9 +1,9 @@
 import React from 'react';
 import { Container, LogoCiti, LogoRocketComponent } from './style';
 import { Logo, LogoRocket } from '../../assets';
-import { LoginAuth } from '..';
+import { LoginAuth } from '../../components';
 
-const HomePage: React.FC = () => (
+const Home: React.FC = () => (
   <>
     <Container>
       <LogoCiti src={Logo} alt="" />
@@ -17,4 +17,4 @@ const HomePage: React.FC = () => (
   </>
 );
 
-export default HomePage;
+export default Home;

@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 import React from 'react';
 import GoogleButton from 'react-google-button';
 
@@ -8,14 +9,10 @@ import { refreshTokenSetup } from '../../utils/refreshToken';
 
 const clientId = process.env.REACT_APP_CLIENT_ID || '123';
 
-function LoginAuth(): JSX.Element {
+const LoginAuth: React.FC = () => {
   const history = useHistory();
-
   const onSuccess = (res: any) => {
     console.log('Login Success: currentUser:', res.profileObj);
-    // alert(`Logged in successfully welcome
-    // ${res.profileObj.name} 😍. \n
-    //  See console for full profile object.`);
     history.push('/meetings');
     refreshTokenSetup(res);
   };
@@ -47,6 +44,6 @@ function LoginAuth(): JSX.Element {
       />
     </>
   );
-}
+};
 
 export default LoginAuth;
