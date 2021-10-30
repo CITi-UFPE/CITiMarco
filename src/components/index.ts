@@ -1,5 +1,5 @@
-import { HomePage } from './HomePage';
+import DurationInput from './DurationInput';
 
 export {
-  HomePage,
+  DurationInput,
 };
