@@ -31,7 +31,7 @@ export const Container = styled.div`
 `;
 
 export const LogoCiti = styled.img`
-  width: 30%;
+  width: 200px;
 `;
 
 export const LogoRocketComponent = styled.img`
