@@ -7,7 +7,7 @@ import {
 export const Container = styled.div`
   width: 100%;
   height: 50px;
-  margin: 15px 0;
+  margin: 20px 0;
 `;
 
 export const SelectInput = styled(Select)`
@@ -15,5 +15,5 @@ export const SelectInput = styled(Select)`
 `;
 
 export const Label = styled(InputLabel)`
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 `;

@@ -13,7 +13,7 @@ const LoginAuth: React.FC = () => {
   const history = useHistory();
   const onSuccess = (res: any) => {
     console.log('Login Success: currentUser:', res.profileObj);
-    history.push('/meetings');
+    history.push('/create-event');
     refreshTokenSetup(res);
   };
 
