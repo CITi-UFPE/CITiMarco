@@ -7,7 +7,7 @@ import {
 type TableProps = {
   title: string;
 }
-export const TableInputs: React.FC<TableProps> = ({ title }) => (
+export const TableInputs: React.FC<TableProps> = ({ title }: TableProps) => (
   <Container>
     <TitleContainer>
       <Text>{title}</Text>
