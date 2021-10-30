@@ -6,6 +6,8 @@ import {
   DurationInput,
   EventNameInput,
   ParticipantsInput,
+  Input,
+  TableInputs,
 } from '../../components';
 
 const CreateEvent: React.FC = () => {
@@ -16,6 +18,7 @@ const CreateEvent: React.FC = () => {
   nextWeek.setDate(nextWeek.getDate() + 7);
   const [finalDate, setFinalDate] = useState<Date>(nextWeek);
   const [participants, setParticipants] = useState<string[]>([]);
+  const [name, setName] = useState('');
 
   const HandleClick = () => {
     console.log('muito bom');
@@ -55,6 +58,9 @@ const CreateEvent: React.FC = () => {
         />
       </div>
       <Button onClickFunction={HandleClick} textValue="Seguinte" />
+      <TableInputs title="test">
+        <Input state={name} setState={setName} placeholder="test" />
+      </TableInputs>
     </Container>
   );
 };
