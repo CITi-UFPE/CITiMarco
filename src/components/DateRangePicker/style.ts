@@ -17,18 +17,4 @@ export const DatePickerDiv = styled.div`
     color: #292929;
   }
 
-  @media(max-width: 935px){
-    .MuiInputBase-root{
-    font: 400 12px sans-serif,
-  }
-
-  .MuiInputBase-input{
-    padding: 0;
-  }
-  }
-  @media(max-width: 780px){
-    .MuiInputBase-root{
-    font-size: 11px;
-  }
-  }
 `;

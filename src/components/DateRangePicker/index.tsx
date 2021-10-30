@@ -5,7 +5,7 @@ import ptBR from 'date-fns/locale/pt-BR';
 
 import { DatePickerDiv } from './style';
 
-export const DateRangePicker: React.ElementType = () => {
+const DateRangePicker: React.ElementType = () => {
   const nextWeek = new Date();
   nextWeek.setDate(nextWeek.getDate() + 7);
   const [initialDate, setInitialDate] = useState<Date | null>(new Date());
@@ -43,3 +43,5 @@ export const DateRangePicker: React.ElementType = () => {
     </DatePickerDiv>
   );
 };
+
+export default DateRangePicker;

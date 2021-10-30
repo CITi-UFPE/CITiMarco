@@ -6,8 +6,10 @@ type ButtonProps = {
   textValue: string;
 };
 
-export const Button: React.FC<ButtonProps> = ({ onClickFunction, textValue }) => (
+const Button: React.FC<ButtonProps> = ({ onClickFunction, textValue }) => (
   <ButtonContainer onClick={() => onClickFunction}>
     <Text>{textValue}</Text>
   </ButtonContainer>
 );
+
+export default Button;
