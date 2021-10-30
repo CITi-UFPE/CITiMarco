@@ -7,6 +7,7 @@ import DateRangePicker from './DateRangePicker';
 import EventNameInput from './EventNameInput';
 import ParticipantsInput from './ParticipantsInput';
 import ConfirmedMeeting from './ConfirmedMeeting';
+import Checkboxes from './Checkboxes';
 
 export {
   LoginAuth,
@@ -18,4 +19,5 @@ export {
   EventNameInput,
   ParticipantsInput,
   ConfirmedMeeting,
+  Checkboxes,
 };
