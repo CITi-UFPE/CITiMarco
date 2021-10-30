@@ -2,15 +2,21 @@ import React from 'react';
 import GoogleButton from 'react-google-button';
 
 import { GoogleLogin } from 'react-google-login';
+import { useHistory } from 'react-router-dom';
 // refresh token
 import { refreshTokenSetup } from '../../utils/refreshToken';
 
 const clientId = process.env.REACT_APP_CLIENT_ID || '123';
 
 function LoginAuth(): JSX.Element {
+  const history = useHistory();
+
   const onSuccess = (res: any) => {
     console.log('Login Success: currentUser:', res.profileObj);
-    alert(`Logged in successfully welcome ${res.profileObj.name} 😍. \n See console for full profile object.`);
+    // alert(`Logged in successfully welcome
+    // ${res.profileObj.name} 😍. \n
+    //  See console for full profile object.`);
+    history.push('/meetings');
     refreshTokenSetup(res);
   };
 
