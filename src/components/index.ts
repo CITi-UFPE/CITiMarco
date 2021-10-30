@@ -3,7 +3,8 @@ import LoginAuth from './LoginAuth';
 import LogoutAuth from './LogoutAuth';
 import Button from './Button';
 import DateRangePicker from './DateRangePicker';
-import Input from './Input';
+import EventNameInput from './EventNameInput';
+import ParticipantsInput from './ParticipantsInput';
 
 export {
   LoginAuth,
@@ -11,5 +12,6 @@ export {
   DateRangePicker,
   Button,
   DurationInput,
-  Input,
+  EventNameInput,
+  ParticipantsInput,
 };
