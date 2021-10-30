@@ -35,4 +35,29 @@ interface algorithmReturnType {
   lvlSum: number;
 }
 
+// usefull functions ------------------------------------------------------------
+
+const getEventLvl = (eventElement: event | null): number => {
+  if (eventElement === null) {
+    return 0;
+  }
+  const eventDescription = eventElement.description;
+  const descriptionSplited = eventDescription.split('eventLvl: ');
+  if (descriptionSplited.length > 1) {
+    const lvlAsChar = descriptionSplited[1].charAt(0);
+    return Number(lvlAsChar);
+  }
+  return 1;
+};
+
+const getEventAtATime = (time: Date, userElement: user): event | null => {
+  const userCalendar = userElement.googleCalendar;
+  const events = userCalendar.items;
+  for (const eventElement of events) {
+    if (isBefore(eventElement.start.dateTime, time) && isBefore(time, eventElement.end.dateTime)) {
+      return eventElement;
+    }
+  }
+  return null;
+};
 export { };
