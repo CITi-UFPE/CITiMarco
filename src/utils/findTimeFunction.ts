@@ -107,4 +107,37 @@ const algorithmInputTest: algorithmInput = {
 
 // test variables ------------------------------------------------------- end
 
-export { };
+const findTimeFunction = (): algorithmReturnType[] => {
+  const algorithmReturn: algorithmReturnType[] = [];
+
+  // algorithmInputTest.users.forEach((userElement) => {
+  let timeOfAnalysis = algorithmInputTest.minTime;
+  while (isBefore(timeOfAnalysis, testEvent.end.dateTime)) { // for every time
+  // if the time of analysis is between 08 and 18h
+    if (timeOfAnalysis.getHours() >= 8 && timeOfAnalysis.getHours() <= 18) { // ok
+      let canBeScheduled = true;
+      // for every user
+      let lvlSum = 0;
+      algorithmInputTest.users.forEach((userElement) => { // for every user
+        const eventAtThisTime = getEventAtATime(timeOfAnalysis, userElement);
+        const eventLvl = getEventLvl(eventAtThisTime);
+        lvlSum += eventLvl;
+        if (eventLvl >= algorithmInputTest.eventLvl) {
+          canBeScheduled = false;
+        }
+      });
+      if (canBeScheduled) {
+        algorithmReturn.push({
+          time: timeOfAnalysis,
+          lvlSum,
+        });
+      }
+    }
+    timeOfAnalysis = addMinutes(timeOfAnalysis, 15);
+  }
+  // eslint-disable-next-line no-debugger
+  debugger;
+  return algorithmReturn;
+};
+
+export { findTimeFunction };
