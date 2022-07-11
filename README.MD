@@ -61,7 +61,7 @@
 
 ## About The Project
 
-    This open source repository which aims to develop an auxiliary tool for scheduling meetings on Google Calendar with an algorithm that analyzes the meeting priority, best time, day and duration for each guest, returning them in an interface integrated with the Google Calendar API that allows the user to schedule the meeting from there.
+This open source repository which aims to develop an auxiliary tool for scheduling meetings on Google Calendar with an algorithm that analyzes the meeting priority, best time, day and duration for each guest, returning them in an interface integrated with the Google Calendar API that allows the user to schedule the meeting from there.
 
 
 ### Built With
